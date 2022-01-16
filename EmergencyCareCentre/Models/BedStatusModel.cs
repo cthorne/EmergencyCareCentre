@@ -13,7 +13,7 @@ namespace EmergencyCareCentre.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
-        public BedStatusEnum BedStatus { get; set; }
+        public string BedStatus { get; set; }
 
     }
 }

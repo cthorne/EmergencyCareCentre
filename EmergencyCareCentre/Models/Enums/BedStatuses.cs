@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace EmergencyCareCentre.Models
 {
-    public enum BedStatusEnum
+    public static class BedStatuses
     {
-        // Allows future growth, ie for empty but needs cleaning
-        InUse,
-        Free
+        public static int InUse = 1;
+        public static int Free = 2;
     }
 }

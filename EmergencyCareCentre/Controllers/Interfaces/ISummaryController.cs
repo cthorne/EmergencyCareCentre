@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace EmergencyCareCentre.Controllers.Interfaces
 {
-    interface ISummaryController
+    public interface ISummaryController
     {
+
     }
 }

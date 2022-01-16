@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmergencyCareCentre.Repositories.Interfaces
 {
-    interface IPatientRepository
+    public interface IPatientRepository
     {
         IEnumerable<PatientModel> GetPatients();
         PatientModel GetPatientById(int patientId);

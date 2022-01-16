@@ -11,6 +11,10 @@ using EmergencyCareCentre.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using EmergencyCareCentre.Repositories.Interfaces;
+using EmergencyCareCentre.Repositories;
+using EmergencyCareCentre.Services;
+using EmergencyCareCentre.Services.Interfaces;
 
 namespace EmergencyCareCentre
 {
@@ -35,6 +39,9 @@ namespace EmergencyCareCentre
 
             services.AddIdentityServer()
                 .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
+
+            services.AddScoped<IBedRepository, BedRepository>();
+            services.AddScoped<IBedService, BedService>();
 
             services.AddAuthentication()
                 .AddIdentityServerJwt();

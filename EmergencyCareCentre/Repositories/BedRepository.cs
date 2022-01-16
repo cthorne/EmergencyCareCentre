@@ -1,6 +1,7 @@
 ﻿using EmergencyCareCentre.Data;
 using EmergencyCareCentre.Models;
 using EmergencyCareCentre.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace EmergencyCareCentre.Repositories
 
         public IEnumerable<BedModel> GetBeds()
         {
-            return _dbContext.Beds.ToList();
+            return _dbContext.Beds.Include(u => u.BedStatus).ToList();
         }
 
         public void InsertBed(BedModel bed)

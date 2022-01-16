@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmergencyCareCentre.Repositories.Interfaces
 {
-    interface ICommentRepository
+    public interface ICommentRepository
     {
         IEnumerable<CommentModel> GetComments();
         CommentModel GetCommentById(int commentId);

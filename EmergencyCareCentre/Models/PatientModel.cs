@@ -18,6 +18,8 @@ namespace EmergencyCareCentre.Models
         public string FirstName { get; set; }
         [Required] 
         public string Surname { get; set; }
+        [Required]
+        public DateTime Admitted { get; set; }
         public List<CommentModel> Comments { get; set; }
 
         // Patient may not necessarily always be in a bed at present

@@ -14,8 +14,12 @@ namespace EmergencyCareCentre.Models
         public int Id { get; set; }
         [Required]
         public PatientModel Patient { get; set; }
+        
+        // In a more-developed app Nurse would be a more customised object
+        // and differentiate from other login users
         [Required]
-        public NurseModel Nurse { get; set; }
+        public ApplicationUser Nurse { get; set; }
+
         [Required]
         public DateTime Created { get; set; }
     }

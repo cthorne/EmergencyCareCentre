@@ -13,6 +13,5 @@ namespace EmergencyCareCentre.Controllers.Interfaces
         void InsertComment(CommentModel comment);
         void DeleteComment(int commentId);
         void UpdateComment(CommentModel comment);
-        void Save();
     }
 }

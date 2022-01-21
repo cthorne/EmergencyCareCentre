@@ -30,6 +30,10 @@ namespace EmergencyCareCentre.Services
         {
             return _patientRepo.GetPatients();
         }
+        public IEnumerable<PatientModel> GetCurrentPatients()
+        {
+            return _patientRepo.GetPatients().Where(p => !p.Discharged.HasValue);
+        }
 
         public void InsertPatient(PatientModel patient)
         {

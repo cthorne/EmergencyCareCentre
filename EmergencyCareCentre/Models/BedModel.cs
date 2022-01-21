@@ -14,6 +14,7 @@ namespace EmergencyCareCentre.Models
         public int Id { get; set; }
         [Required]
         public BedStatusModel BedStatus { get; set; }
+        public PatientModel PatientInBed { get; set; }
         public DateTime LastUpdated { get; set; }
     }
 }

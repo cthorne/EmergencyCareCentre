@@ -42,7 +42,7 @@ namespace EmergencyCareCentre.Controllers.Interfaces
         [HttpGet]
         public BedModel GetBed(int bedId)
         {
-           return _bedsService.GetBedById(bedId)
+            return _bedsService.GetBedById(bedId);
         }
 
         [HttpGet]

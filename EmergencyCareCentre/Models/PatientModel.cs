@@ -20,11 +20,8 @@ namespace EmergencyCareCentre.Models
         public string Surname { get; set; }
         [Required]
         public DateTime Admitted { get; set; }
+        public DateTime? Discharged { get; set; }
         public List<CommentModel> Comments { get; set; }
-
-        // Patient may not necessarily always be in a bed at present
-        // For example a waiting room or in-between staging area
-        public BedModel AssignedBed { get; set; }
         public string PresentingIssue { get; set; }
         
         // Keep track of patients last updated statuses for tracking and QA

@@ -46,6 +46,16 @@ namespace EmergencyCareCentre.Services
             _bedRepo.UpdateBed(bed);
         }
 
+        public void DischargeBed(int bedId)
+        {
+            var bed = _bedRepo.GetBedById(bedId);
+            var patient = bed.PatientInBed;
+
+            patient.Discharged = DateTime.UtcNow;
+            bed.PatientInBed = null;
+            _bedRepo.UpdateBed(bed);
+        }
+
         public IEnumerable<BedModel> GetBedsWithStatus(int status)
         {
             return _bedRepo.GetBeds().Where(b => b.BedStatus.Id == status);
